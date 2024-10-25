@@ -2,10 +2,13 @@
 ## 安装VScode:
 · url:https://code.visualstudio.com/
 ![alt text](image.png)
+
 - 因为我这边使用的系统是Linux所以是.deb或者.rpm随便下载哪个都可以。
 ![alt text](image-1.png)
+
 - 下载完成后使用命令dpkg -i 加安装包名称进行安装。
 ![alt text](image-2.png)
+
 这样就安装成功了。
 
 - 安装完成后可以在application中找到。
@@ -19,6 +22,7 @@
 
 - 使用命令code --no-sandbox重新启动
 ![alt text](image-6.png)
+
 这样就启动成功了。
 
 ## 插件安装市场
@@ -94,8 +98,10 @@
 ## 字体配置
 - 字体过小开发时会加重我们的负担，此时我们需要对字体大小进行配置，打开设置（ctrl+,）
 ![alt text](image-24.png)
+
 - 在这个页面，我们能看到font Size、Font Famil等内容，根据需要可自行配置，此处我们修改字体大小为20.
 ![alt text](image-25.png)
+
 - 修改后
 ![alt text](image-27.png)
 
@@ -133,6 +139,7 @@
 - 设置用户签名用于提交代码时表明身份
 git config --global user.name "Al17er"
 ![alt text](image-35.png)
+
 git config --gloabl user.email "aaa@qq.com"
 ![alt text](image-36.png)
 
@@ -155,8 +162,10 @@ git status
 ## 添加暂存区
 git add
 ![alt text](image-40.png)
+
 - 再次查看状态
 ![alt text](image-41.png)
+
 - 此时文件存储在暂存区还是可以删除的，通过命令git rm --cached hello.txt,这个命令只会删除暂存区不会删除本地文件。
 ![alt text](image-42.png)
 
@@ -164,6 +173,7 @@ git add
 ## 提交文件
 git commit -m "日志信息" 文件名
 ![alt text](image-43.png)
+
 - 再次查看日志
 
 ![alt text](image-44.png)
@@ -175,8 +185,10 @@ git log  //详细日志
 
 ## 修改文件
 ![alt text](image-46.png)
+
 - 添加文件至暂存区
 ![alt text](image-47.png)
+
 - 提交文件
 ![alt text](image-48.png)
 
