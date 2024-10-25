@@ -1,26 +1,33 @@
 # IDE笔记
 ## 安装VScode:
-· url:https://code.visualstudio.com/
+url:https://code.visualstudio.com/
+
 ![alt text](image.png)
 
 - 因为我这边使用的系统是Linux所以是.deb或者.rpm随便下载哪个都可以。
+
 ![alt text](image-1.png)
 
 - 下载完成后使用命令dpkg -i 加安装包名称进行安装。
+
 ![alt text](image-2.png)
 
 这样就安装成功了。
 
 - 安装完成后可以在application中找到。
+
 ![alt text](image-3.png)
 
 - 点击打开出现了报错，先不要急。
+
 ![alt text](image-4.png)
 
 - 我们通过命令行启动，发现原因是因为尝试使用超级用户，可以添加"--no-sandbox"
+
 ![alt text](image-5.png)
 
 - 使用命令code --no-sandbox重新启动
+
 ![alt text](image-6.png)
 
 这样就启动成功了。
@@ -34,9 +41,11 @@
 
 
 ## 关于其他区域划分可参考下图
+
 ![alt text](image-8.png)
 
 ## 在vscode的欢迎页中有一些引导配置，比如我们可以选择自己喜欢的主题，其他的有兴趣可以自己研究一下。
+
 ![alt text](image-9.png)
 
 
@@ -47,6 +56,7 @@
 
 ## 查看菜单介绍
 查看菜单用于设置开发功能区的显示与隐藏，当我们意外关闭某个功能区时可以在此处重新打开。
+
 ![alt text](image-11.png)
 
 - 以上两个菜单是我们开发时最常用的，关于其他菜单用的不多，点一下看看了解就行了。
@@ -57,12 +67,15 @@
 ### 技巧1：快速选中
 
 - 摁住Alt+shift 移动光标可以快速选中任意矩形范围内容。
+
 ![alt text](image-12.png)
 
 - 摁住Alt+shift+上下可以拓展光标长度同时修改多行内容
+
 ![alt text](image-13.png)
 
 - 选中一个单词后，使用ctrl+shift+L可以快速选中全文中出现的这个单词
+
 ![alt text](image-14.png)
 
 ### 技巧2：智能提示
@@ -78,16 +91,19 @@
 
 ### 技巧4：重命名
 - 选中类名，使用F2，可根据上下文快速对代码中所有关联内容进行重命名。
+
 ![alt text](image-18.png)
 ![alt text](image-19.png)
 
 ### 技巧5：快速排版
 - 使用ctrl+shift+i 可以快速对代码进行格式化。
+
 ![alt text](image-20.png)
 ![alt text](image-21.png)
 
 ### 技巧6: 快速折叠
 - 使用ctrl+shift+[可以快速折叠代码，使用ctrl+shift+]可快速展开。
+
 ![alt text](image-22.png)
 ![alt text](image-23.png)
 
@@ -97,16 +113,20 @@
 
 ## 字体配置
 - 字体过小开发时会加重我们的负担，此时我们需要对字体大小进行配置，打开设置（ctrl+,）
+
 ![alt text](image-24.png)
 
 - 在这个页面，我们能看到font Size、Font Famil等内容，根据需要可自行配置，此处我们修改字体大小为20.
+
 ![alt text](image-25.png)
 
 - 修改后
+
 ![alt text](image-27.png)
 
 ## 配置重启后打开空白项目
 - 设置中搜索restore 设置为None即可
+
 ![alt text](image-28.png)
 
 ## 配置重启后什么都不打开
@@ -121,10 +141,12 @@
 
 ## 设置打开文件只预览，不修改
 - 设置中搜索preview 勾选enable preview选框
+
 ![alt text](image-32.png)
 
 ## 光标设置
 - 设置中搜索cursor可以对光标进行自定义配置
+
 ![alt text](image-33.png)
 
 - 到这里我们的VSCode基本上就够用了下面让我们进入git学习。
@@ -133,23 +155,28 @@
 
 ## 安装
 - 在linux 中我们可以直接使用命令apt install git -y 安装git程序。
+
 ![alt text](image-34.png)
 
 ## 设置用户签名
 - 设置用户签名用于提交代码时表明身份
 git config --global user.name "Al17er"
+
 ![alt text](image-35.png)
 
 git config --gloabl user.email "aaa@qq.com"
+
 ![alt text](image-36.png)
 
 ## 初始化本地库
 - 初始化本地库使git获取项目管理权。
 git init
+
 ![alt text](image-37.png)
 
 ## 查看本地库状态
 git status
+
 ![alt text](image-38.png)
 
 - 第一行表明当前在master分支
@@ -157,21 +184,26 @@ git status
 - 第三行表明当前没有要提交的内容
 
 - 目录下新增文件后查看状态发现状态多了提交文件
+
 ![alt text](image-39.png)
 
 ## 添加暂存区
 git add
+
 ![alt text](image-40.png)
 
 - 再次查看状态
+
 ![alt text](image-41.png)
 
 - 此时文件存储在暂存区还是可以删除的，通过命令git rm --cached hello.txt,这个命令只会删除暂存区不会删除本地文件。
+
 ![alt text](image-42.png)
 
 
 ## 提交文件
 git commit -m "日志信息" 文件名
+
 ![alt text](image-43.png)
 
 - 再次查看日志
@@ -181,19 +213,24 @@ git commit -m "日志信息" 文件名
 ## 查看日志
 git reflog //精简日志
 git log  //详细日志
+
 ![alt text](image-45.png)
 
 ## 修改文件
+
 ![alt text](image-46.png)
 
 - 添加文件至暂存区
+
 ![alt text](image-47.png)
 
 - 提交文件
+
 ![alt text](image-48.png)
 
 ## 穿梭版本
 git reset --hard 版本号
+
 ![alt text](image-49.png)
 
 ## 分支概念
@@ -274,8 +311,11 @@ git push
 ssh-keygen -t rsa -C "邮箱地址"
 查看~/.ssh/id_rsa.pub文件内容
 最后在github上添加公钥
+
 ![alt text](image-62.png)
 
 ssh -T git@github.com
+
 ![alt text](image-63.png)
+
 - 出现这个内容代表配置成功！
